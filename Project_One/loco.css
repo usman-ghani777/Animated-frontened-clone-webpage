@@ -1,0 +1,55 @@
+/*! locomotive-scroll v4.1.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging {
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  display: inline-block;
+  height: 100vh;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.has-scroll-smooth [data-scroll-section] {
+  position: relative;
+}
+
+.has-scroll-smooth [data-scroll-bar] {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100vh;
+  z-index: 999;
+}
+
+.has-scroll-smooth [data-scroll-thumb] {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.has-scroll-dragging [data-scroll-thumb] {
+  cursor: grabbing;
+}
