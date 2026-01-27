@@ -68,6 +68,7 @@ html, body{
    font-weight: 900;
    line-height: 1;
    opacity: 0.6;
+   margin-left: 20px;
 
 }
 
@@ -159,15 +160,19 @@ html, body{
 .elemlast {
     border-bottom: 1px solid #888;
 }
-.elem img{
+.elem img {
     position: absolute;
-    width: 250px;      /* FIX SIZE */
-    height: 180px;     /* FIX SIZE */
-    object-fit: cover; /* Prevent stretch */
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
     z-index: 999;
+    /* Start hidden but available to animate */
+    opacity: 0; 
+    pointer-events: none; 
+    /* Center it initially */
     top: 50%;
-    transform: translateY(-50%);
-    display: none;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 #about{
     display: flex;
